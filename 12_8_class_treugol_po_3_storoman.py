@@ -6,13 +6,34 @@ a = int(input('Введите первую сторону: '))
 b = int(input('Введите вторую сторону: '))
 c = int(input('Введите третью сторону: '))
 
-if a + b > c and a + c > b and b + c > a:
-    if a > 0 and b > 0 and c > 0:
-        print('Такой треугольник существует')
+if a > 0 and b > 0 and c > 0 and a + b > c and a + c > b and b + c > a:
+    print('Такой треугольник существует')
 
-if a == b and b == c and a == c:
-    print('Треугольник равносторонний')
-elif a == b or a == c or b == c:
-    print('Треугольник равнобедренный')
+    if a == b == c:
+        print('Треугольник равносторонний')
+    elif a == b or a == c or b == c:
+        print('Треугольник равнобедренный')
+    else:
+        print('Треугольник разносторонний')
+
 else:
-    print('Треугорьник разносторонний')
+    print('Треугольник не существует')
+
+
+# def triangle_type(a, b, c):
+#     if not (a > 0 and b > 0 and c > 0):
+#         return 'стороны должны быть положительными'
+#     if not (a + b > c and a + c > b and b + c > a):
+#         return 'треугольник не существует'
+#     if a == b == c:
+#         return 'равносторонний'
+#     if a == b or a == c or b == c:
+#         return 'равнобедренный'
+#     return 'разносторонний'
+
+
+# a = int(input('Введите первую сторону: '))
+# b = int(input('Введите вторую сторону: '))
+# c = int(input('Введите третью сторону: '))
+
+# print('Результат:', triangle_type(a, b, c))
